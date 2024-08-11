@@ -1,0 +1,23 @@
+{
+  "name": "Playwright-typescript-page-objects",
+  "version": "1.0.0",
+  "description": "Playwright demo scripts with page object design pattern and typescript",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrinceSoni83/Playwright-typescript-page-objects.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PrinceSoni83/Playwright-typescript-page-objects/issues"
+  },
+  "homepage": "https://github.com/PrinceSoni83/Playwright-typescript-page-objects#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.46.0",
+    "@types/node": "^22.2.0",
+    "typescript": "^5.5.4"
+  }
+}
