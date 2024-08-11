@@ -1,5 +1,6 @@
 import { expect, type Locator, type Page } from "@playwright/test";
 
+
 export class HomePage {
   readonly page: Page;
   readonly websiteLogo: Locator;
@@ -11,7 +12,7 @@ export class HomePage {
   readonly brandsSectionDiv: Locator;
   readonly featuresItemHeaderText: Locator;
   readonly featuresItemDiv: Locator;
-
+  
   constructor(page: Page) {
     this.page = page;
     this.homeLink = page.getByRole("link", { name: " Home" });
@@ -57,5 +58,11 @@ export class HomePage {
   async validateFeaturesItem() {
     await expect(this.featuresItemHeaderText).toBeVisible();
     await expect(this.featuresItemDiv).toBeVisible();
+  }
+
+  async clickOnLink(page: Page, linkName: string) {
+    await expect(page.getByRole("link", { name: `${linkName}` })).toBeVisible();
+    await page.getByRole("link", { name: `${linkName}` }).click();
+    await page.waitForLoadState("domcontentloaded");
   }
 }
