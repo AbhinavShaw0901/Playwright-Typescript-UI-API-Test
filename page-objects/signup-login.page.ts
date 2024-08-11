@@ -20,7 +20,7 @@ export class SignupLoginPage {
     this.loginButton = page.getByRole("button", { name: "Login" });
     this.registerUserName = page.locator("//input[@data-qa='signup-name']");
     this.registerUserEmail = page.locator("//input[@data-qa='signup-email']");
-    this.signUpButton = this.loginButton = page.getByRole("button", {
+    this.signUpButton = page.getByRole("button", {
       name: "Signup",
     });
   }
