@@ -26,7 +26,7 @@ When a test fails, you can have it automatically run again by using test retries
 
 ## Debugging
 
-`test_env=staging npx playwright test --debug`
+`npx playwright test --debug`
 
 Since Playwright runs in Node.js, thus you can debug it using your preferred debugger, such as 'console.log', your IDE, or the [VS Code Extension](https://playwright.dev/docs/getting-started-vscode). Playwright comes with the [Playwright Inspector](https://playwright.dev/docs/debug#playwright-inspector) that is included with Playwright enables you to step through Playwright API calls, view their debug logs, and investigate [selectors](https://playwright.dev/docs/selectors).
 
