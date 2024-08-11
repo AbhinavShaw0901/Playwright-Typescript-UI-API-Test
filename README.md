@@ -18,7 +18,8 @@ See the full list of [test options](https://playwright.dev/docs/api/class-testop
 
 You have the option to perform one test, a group of tests, or all tests. One browser or a number of browsers can be used to run tests. By default, tests are performed headlessly, which means no browser tabs are opened while they are being run and results are displayed in the terminal.
 
-`test_env=staging npx playwright test --reporter=html`
+`npx playwright test <test-name> --reporter=html` to run single test
+`npx playwright test  --reporter=html` to run all the tests
 
 here is the list of [command line test run options](https://playwright.dev/docs/running-tests#command-line)
 
