@@ -1,6 +1,5 @@
 import { expect, type Locator, type Page } from "@playwright/test";
 
-
 export class HomePage {
   readonly page: Page;
   readonly websiteLogo: Locator;
@@ -12,7 +11,7 @@ export class HomePage {
   readonly brandsSectionDiv: Locator;
   readonly featuresItemHeaderText: Locator;
   readonly featuresItemDiv: Locator;
-  
+
   constructor(page: Page) {
     this.page = page;
     this.homeLink = page.getByRole("link", { name: " Home" });
@@ -32,12 +31,15 @@ export class HomePage {
     this.featuresItemDiv = page.locator("//div[@class='features_items']");
   }
 
-  async validateWebsiteLogo() {
+  async validateWebsiteLogo(): Promise<void> {
     await expect(this.websiteLogo).toBeVisible();
     await expect(this.websiteLogo).toBeVisible();
   }
 
-  async validateAllLinksInHomePage(page: Page, links: Array<string>) {
+  async validateAllLinksInHomePage(
+    page: Page,
+    links: Array<string>
+  ): Promise<void> {
     links.forEach(async function (value) {
       await page.waitForLoadState("domcontentloaded");
       console.log(value);
@@ -45,22 +47,22 @@ export class HomePage {
     });
   }
 
-  async validateCategorySection() {
+  async validateCategorySection(): Promise<void> {
     await expect(this.categoryHeaderText).toBeVisible();
     await expect(this.categorySectionDiv).toBeVisible();
   }
 
-  async validateBrancSection() {
+  async validateBrancSection(): Promise<void> {
     await expect(this.brandsHeaderText).toBeVisible();
     await expect(this.brandsSectionDiv).toBeVisible();
   }
 
-  async validateFeaturesItem() {
+  async validateFeaturesItem(): Promise<void> {
     await expect(this.featuresItemHeaderText).toBeVisible();
     await expect(this.featuresItemDiv).toBeVisible();
   }
 
-  async clickOnLink(page: Page, linkName: string) {
+  async clickOnLink(page: Page, linkName: string): Promise<void> {
     await expect(page.getByRole("link", { name: `${linkName}` })).toBeVisible();
     await page.getByRole("link", { name: `${linkName}` }).click();
     await page.waitForLoadState("domcontentloaded");

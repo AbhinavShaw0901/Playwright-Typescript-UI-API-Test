@@ -1,11 +1,11 @@
 import { test } from "@playwright/test";
-import { HomePage } from "../page-objects/home.page";
-import { SignupLoginPage } from "../page-objects/signup-login.page";
-import { SearchProductPage } from "../page-objects/search-product.page";
+import { HomePage } from "../../page-objects/home.page";
+import { SignupLoginPage } from "../../page-objects/signup-login.page";
+import { SearchProductPage } from "../../page-objects/search-product.page";
 
-import { productData } from "../test-data/products.json";
-import { userData } from "../test-data/users.json";
-import { CartPage } from "../page-objects/cart.page";
+import { productData } from "../../test-data/products.json";
+import { userData } from "../../test-data/users.json";
+import { CartPage } from "../../page-objects/cart.page";
 let productType: string = productData.productType;
 let email: string = userData.email;
 let password: string = userData.password;
@@ -41,6 +41,5 @@ test.describe("Search, Add to Cart and Purchase a Product", () => {
     await signupLoginPage.loginWithValidUser(email, password);
     await cartPage.clickOnCartLink();
     await cartPage.clickOnProceedToCheckoutLink();
-    
   });
 });

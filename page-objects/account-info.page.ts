@@ -45,7 +45,7 @@ export class AccountInfo {
     this.loggedInAsUser = page.locator("//i[@class='fa fa-user']");
   }
 
-  async enterAccInformation(pwd: string, firstName: string) {
+  async enterAccInformation(pwd: string, firstName: string): Promise<void> {
     await expect(this.genderRadioButton).toBeVisible();
     await expect(this.nameInput).toBeVisible();
     await expect(this.emailInput).toBeVisible();

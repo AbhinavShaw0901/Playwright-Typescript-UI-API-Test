@@ -31,7 +31,7 @@ export class SearchProductPage {
     });
   }
 
-  async searchProduct(productName: string) {
+  async searchProduct(productName: string): Promise<void> {
     await expect(this.productsLink).toBeVisible();
     await this.productsLink.click();
     await expect(this.searchProductInput).toBeEditable();
@@ -42,7 +42,7 @@ export class SearchProductPage {
     await expect(this.viewProductDetailsButton).toBeVisible();
   }
 
-  async clickOnAddToCart() {
+  async clickOnAddToCart(): Promise<void> {
     await expect(this.addToCartButton).toBeVisible();
     await this.addToCartButton.click();
     await expect(this.productAddedHeading).toBeVisible();

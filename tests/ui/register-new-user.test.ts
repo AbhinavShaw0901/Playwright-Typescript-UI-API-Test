@@ -1,8 +1,8 @@
 import { test } from "@playwright/test";
-import { HomePage } from "../page-objects/home.page";
-import { SignupLoginPage } from "../page-objects/signup-login.page";
-import { Random } from "../utils/random";
-import { AccountInfo } from "../page-objects/account-info.page";
+import { HomePage } from "../../page-objects/home.page";
+import { SignupLoginPage } from "../../page-objects/signup-login.page";
+import { Random } from "../../utils/random";
+import { AccountInfo } from "../../page-objects/account-info.page";
 //declear global variables for this file
 const random = new Random();
 let name: string = random.getRandomName(5);

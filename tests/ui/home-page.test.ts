@@ -1,5 +1,5 @@
 import { test } from "@playwright/test";
-import { HomePage } from "../page-objects/home.page";
+import { HomePage } from "../../page-objects/home.page";
 
 let websiteLinks: string[] = [
   " Home",

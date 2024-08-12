@@ -17,17 +17,17 @@ export class CartPage {
     );
   }
 
-  async clickOnCartLink() {
+  async clickOnCartLink(): Promise<void> {
     await expect(this.cartLink).toBeVisible();
     await this.cartLink.click();
   }
 
-  async validateShoppingCartPage() {
+  async validateShoppingCartPage(): Promise<void> {
     await expect(this.shoppingCartPageTitle).toBeVisible();
     await expect(this.cartInfoTable).toBeVisible();
   }
 
-  async clickOnProceedToCheckoutLink() {
+  async clickOnProceedToCheckoutLink(): Promise<void> {
     await expect(this.proceedToCheckoutButton).toBeVisible();
     await this.proceedToCheckoutButton.click();
   }

@@ -25,12 +25,12 @@ export class SignupLoginPage {
     });
   }
 
-  async navigateToLoginPage() {
+  async navigateToLoginPage(): Promise<void> {
     await expect(this.signupLoginLink).toBeEnabled();
     await this.signupLoginLink.click();
   }
 
-  async registerNerUser(name: string, email: string) {
+  async registerNerUser(name: string, email: string): Promise<void> {
     await expect(this.registerUserName).toBeEnabled();
     await expect(this.registerUserEmail).toBeEnabled();
     await expect(this.signUpButton).toBeEnabled();
@@ -39,7 +39,7 @@ export class SignupLoginPage {
     await this.signUpButton.click();
   }
 
-  async loginWithValidUser(email: string, password: string) {
+  async loginWithValidUser(email: string, password: string): Promise<void> {
     await expect(this.loginEmail).toBeEnabled();
     await expect(this.loginPassword).toBeEnabled();
     await this.loginEmail.fill(email);
@@ -47,7 +47,7 @@ export class SignupLoginPage {
     await this.loginButton.click();
   }
 
-  async validatedLoggedInUsed(page: Page, user: string) {
+  async validatedLoggedInUsed(page: Page, user: string): Promise<void> {
     const loggedInAsText: Locator = page.getByText(`Logged in as ${user}`);
     await expect(loggedInAsText).toBeVisible();
   }
