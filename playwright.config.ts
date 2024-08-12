@@ -33,7 +33,6 @@ export default defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: "https://www.automationexercise.com",
-
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
     screenshot: "only-on-failure",
@@ -45,8 +44,19 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      name: "web",
+      use: {
+        ...devices["Desktop Chrome"],
+        baseURL: "https://www.automationexercise.com",
+      },
+    },
+
+    {
+      name: "api",
+      use: {
+        ...devices["Desktop Chrome"],
+        baseURL: "https://reqres.in",
+      },
     },
 
     // {
