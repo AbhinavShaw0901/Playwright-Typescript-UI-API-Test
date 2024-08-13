@@ -1,4 +1,4 @@
-[![Playwright-CI](https://github.com/PrinceSoni83/Playwright-Typescript-UI-API-Test/actions/workflows/test.yml/badge.svg)](https://github.com/PrinceSoni83/Playwright-Typescript-UI-API-Test/actions/workflows/test.yml)
+[![Playwright Tests](https://github.com/PrinceSoni83/Playwright-Typescript-UI-API-Test/actions/workflows/playwright.yml/badge.svg)](https://github.com/PrinceSoni83/Playwright-Typescript-UI-API-Test/actions/workflows/playwright.yml)
 
 # Playwright-Typescript-Page-Objects-API
 Playwright demo scripts to automate ui flows using page object design pattern and typescript. The Repo also contains the automated api tests.
