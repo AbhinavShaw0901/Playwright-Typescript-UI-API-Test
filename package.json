@@ -18,6 +18,8 @@
   "devDependencies": {
     "@playwright/test": "^1.46.0",
     "@types/node": "^22.2.0",
+    "allure-commandline": "^2.30.0",
+    "allure-playwright": "^3.0.0-beta.10",
     "typescript": "^5.5.4"
   }
 }
