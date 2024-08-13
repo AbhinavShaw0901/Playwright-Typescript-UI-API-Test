@@ -1,5 +1,5 @@
 {
-  "name": "Playwright-typescript-page-objects",
+  "name": "Playwright-Typescript-UI-API-Test",
   "version": "1.0.0",
   "description": "Playwright demo scripts with page object design pattern and typescript",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "url": "git+https://github.com/PrinceSoni83/Playwright-typescript-page-objects.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Prince Soni",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PrinceSoni83/Playwright-typescript-page-objects/issues"
