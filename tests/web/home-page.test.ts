@@ -17,7 +17,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe("Home Page", () => {
-  test("validate if all the top hyperlinks are displyed on home page", async ({
+  test("validate if all the top hyperlinks are displyed on home page", { tag: "@web" }, async ({
     page,
   }) => {
     const homePage = new HomePage(page);
@@ -28,7 +28,7 @@ test.describe("Home Page", () => {
       await homePage.validateAllLinksInHomePage(page, websiteLinks);
     });
   });
-  test("validate if the brands , category and features item sections displayed on home page", async ({
+  test("validate if the brands , category and features item sections displayed on home page", { tag: "@web" }, async ({
     page,
   }) => {
     const homePage = new HomePage(page);

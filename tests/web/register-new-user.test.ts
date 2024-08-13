@@ -17,17 +17,19 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.describe("Register New User", () => {
-  test("validate user registration", async ({ page }) => {
+  test("validate user registration", { tag: "@web" }, async ({ page }) => {
     const signupLoginPage = new SignupLoginPage(page);
     const accountInfoPage = new AccountInfo(page);
     console.log(`username: ${name} , email: ${email}`);
     await signupLoginPage.registerNerUser(name, email);
     await accountInfoPage.enterAccInformation(name, password);
   });
-  test("validate that newly registered user is able to login successfully", async ({
-    page,
-  }) => {
-    const signupLoginPage = new SignupLoginPage(page);
-    await signupLoginPage.loginWithValidUser(email, password);
-  });
+  test(
+    "validate that newly registered user is able to login successfully",
+    { tag: "@web" },
+    async ({ page }) => {
+      const signupLoginPage = new SignupLoginPage(page);
+      await signupLoginPage.loginWithValidUser(email, password);
+    }
+  );
 });

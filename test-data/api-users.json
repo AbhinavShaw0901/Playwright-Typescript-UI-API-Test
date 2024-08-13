@@ -1,0 +1,32 @@
+{
+    "login": {
+        "user1" : {
+            "email": "eve.holt@reqres.in",
+            "password": "pistol"
+        },
+        "user2" : {
+            "email": "janet.weaver@reqres.in",
+            "password": "pistol"
+        },
+        "user3" : {
+            "email": "lindsay.ferguson@reqres.in",
+            "password": "pistol"
+        },
+        "user4" : {
+            "email": "tobias.funke@reqres.in",
+            "password": "pistol"
+        },
+        "user5" : {
+            "email": "byron.fields@reqres.in",
+            "password": "pistol"
+        }
+    },
+    "create": {
+        "name": "morpheus",
+        "job": "leader"
+    },
+    "update": {
+        "name": "morpheus",
+        "job": "zion resident"
+    }
+}
