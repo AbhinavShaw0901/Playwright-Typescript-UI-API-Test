@@ -1,5 +1,7 @@
-# Playwright-typescript-page-objects
-Playwright demo scripts with page object design pattern and typescript
+[![Playwright-CI](https://github.com/PrinceSoni83/Playwright-Typescript-UI-API-Test/actions/workflows/test.yml/badge.svg)](https://github.com/PrinceSoni83/Playwright-Typescript-UI-API-Test/actions/workflows/test.yml)
+
+# Playwright-Typescript-Page-Objects-API
+Playwright demo scripts to automate ui flows using page object design pattern and typescript. The Repo also contains the automated api tests.
 
 ## About Framework
 
