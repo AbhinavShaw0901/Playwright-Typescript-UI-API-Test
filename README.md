@@ -38,6 +38,10 @@ When a test fails, you can have it automatically run again by using test retries
 
 Since Playwright runs in Node.js, thus we can debug it using your preferred debugger, such as 'console.log', your IDE, or the [VS Code Extension](https://playwright.dev/docs/getting-started-vscode). Playwright comes with the [Playwright Inspector](https://playwright.dev/docs/debug#playwright-inspector) that is included with Playwright enables you to step through Playwright API calls, view their debug logs, and investigate [selectors](https://playwright.dev/docs/selectors).
 
+[UI Mode](https://playwright.dev/docs/test-ui-mode) lets you explore, run and debug tests with a time travel experience complete with watch mode.To open UI mode, run the following command in your terminal:
+
+`npx playwright test --ui`
+
 ## Test Execution Report
 
 A few built-in reporters for various needs are included with Playwright Test, and it also has the option to create custom reporters. Passing the `--reporter` command line option is the simplest approach to test out built-in reporters. Allure At the conclusion of the test execution, an HTML report with a failure **screenshot** and scenario will be generated. For the failed test scenarios, a trace **video** will be attached.
