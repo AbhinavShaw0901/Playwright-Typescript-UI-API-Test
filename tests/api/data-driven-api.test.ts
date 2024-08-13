@@ -5,7 +5,7 @@ const apiCommon = new APICommon();
 
 dataDriven.map((ele) => {
   test(
-    `POST REQUEST - Register multiple users with email -> ${ele.email} and password -> ${ele.password} stored in a json file`,
+    `POST REQUEST - Register user users with email -> ${ele.email} and password -> ${ele.password} stored in a json file`,
     { tag: "@api" },
     async ({ request }) => {
       const response = await request.post("/api/register", {

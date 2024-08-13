@@ -2,7 +2,7 @@ import { test } from "@playwright/test";
 import { HomePage } from "../../page-objects/home.page";
 import { SignupLoginPage } from "../../page-objects/signup-login.page";
 import { SearchProductPage } from "../../page-objects/search-product.page";
-
+import { PaymentInfoPage } from "../../page-objects/payment-info.page";
 import { productData } from "../../test-data/products.json";
 import { userData } from "../../test-data/users.json";
 import { CartPage } from "../../page-objects/cart.page";
@@ -42,14 +42,18 @@ test.describe("Search, Add to Cart and Purchase a Product", () => {
   );
 
   test(
-    "proceed to checkout and make the paymentscreen",
+    "proceed to checkout and make the payment",
     { tag: "@web" },
     async ({ page }) => {
       const signupLoginPage = new SignupLoginPage(page);
       const cartPage = new CartPage(page);
+      const paymentInfoPage = new PaymentInfoPage(page);
       await signupLoginPage.loginWithValidUser(email, password);
       await cartPage.clickOnCartLink();
       await cartPage.clickOnProceedToCheckoutLink();
+      await cartPage.validateReviewYourOrder(page);
+      await cartPage.placeOrder();
+      await paymentInfoPage.paymentDetailAndPlaceOrder();
     }
   );
 });

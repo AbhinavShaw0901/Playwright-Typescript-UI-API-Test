@@ -1,5 +1,4 @@
 import { expect, type Locator, type Page } from "@playwright/test";
-import exp from "constants";
 
 export class CartPage {
   readonly page: Page;
@@ -7,6 +6,8 @@ export class CartPage {
   readonly shoppingCartPageTitle: Locator;
   readonly cartInfoTable: Locator;
   readonly proceedToCheckoutButton: Locator;
+  readonly placeOrderButton: Locator;
+
   constructor(page: Page) {
     this.page = page;
     this.cartLink = page.getByRole("link", { name: " Cart" });
@@ -15,6 +16,7 @@ export class CartPage {
     this.proceedToCheckoutButton = page.locator(
       "//a[normalize-space()='Proceed To Checkout']"
     );
+    this.placeOrderButton = page.getByText("Place Order");
   }
 
   async clickOnCartLink(): Promise<void> {
@@ -30,5 +32,15 @@ export class CartPage {
   async clickOnProceedToCheckoutLink(): Promise<void> {
     await expect(this.proceedToCheckoutButton).toBeVisible();
     await this.proceedToCheckoutButton.click();
+  }
+
+  async validateReviewYourOrder(page: Page): Promise<void> {
+    await expect(page.getByText("Review Your Order")).toBeVisible();
+    await expect(this.cartInfoTable).toBeVisible();
+  }
+
+  async placeOrder(): Promise<void> {
+    await expect(this.placeOrderButton).toBeVisible();
+    await this.placeOrderButton.click();
   }
 }
